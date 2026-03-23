@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Edit Article</h2>
+<form method="post">
+    <input name="title" value="{{article.title}}"><br>
+    <textarea name="content">{{article.content}}</textarea><br>
+    <input type="date" name="date" value="{{article.date}}"><br>
+    <button>Update</button>
+</form>
+{% endblock %}

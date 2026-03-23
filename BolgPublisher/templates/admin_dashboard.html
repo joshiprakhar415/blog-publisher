@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<a href="/add" class="btn">Add Article</a>
+{% for a in articles %}
+<div class="card">
+    <h3>{{a.title}}</h3>
+    <a href="/edit/{{a.id}}">Edit</a>
+    <a href="/delete/{{a.id}}">Delete</a>
+</div>
+{% endfor %}
+{% endblock %}
